@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../build"
+		},
+		{
+			"path": "../ios"
+		},
+		{
+			"path": "../lib"
+		},
+		{
+			"path": "../linux"
+		},
+		{
+			"path": "../macos"
+		},
+		{
+			"path": "../test"
+		},
+		{
+			"path": "../web"
+		},
+		{
+			"path": "../windows"
+		},
+		{
+			"path": "../android"
+		}
+	],
+	"settings": {}
+}
