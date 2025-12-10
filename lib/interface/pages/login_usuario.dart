@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 // pagina de login do usuario coletor
-import 'loginColetor.dart';
+import 'login_coletor.dart';
 
 // pagina de login do usuario comum
 class LoginPage extends StatelessWidget {

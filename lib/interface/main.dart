@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'pages/register.dart'; 
 
 // importação das Paginas do App Recicla
-import 'pages/loginUsuario.dart';
+import 'pages/login_usuario.dart';
 
 // função principal responsavel por execulta o app
 void main() {
