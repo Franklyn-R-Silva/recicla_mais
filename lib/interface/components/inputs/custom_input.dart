@@ -1,3 +1,4 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
 
 /// Campo de entrada padrão do aplicativo.
@@ -37,7 +38,7 @@ class CustomInput extends StatelessWidget {
       children: [
         if (label != null)
           Text(
-            requiredField ? "$label *" : label!,
+            requiredField ? '$label *' : label!,
             style: const TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.w600,

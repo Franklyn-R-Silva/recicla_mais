@@ -1,0 +1,45 @@
+# .editorconfig
+root = true
+
+# ------------------------------
+# Regras gerais para todos os arquivos
+# ------------------------------
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# ------------------------------
+# Regras específicas para Dart
+# ------------------------------
+[*.dart]
+indent_size = 2
+max_line_length = 120
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# ------------------------------
+# Regras específicas para YAML (ex: pubspec.yaml)
+# ------------------------------
+[*.yaml]
+indent_size = 2
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# ------------------------------
+# Regras específicas para JSON
+# ------------------------------
+[*.json]
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# ------------------------------
+# Regras para Markdown e arquivos de texto
+# ------------------------------
+[*.{md,txt}]
+trim_trailing_whitespace = false
+insert_final_newline = true

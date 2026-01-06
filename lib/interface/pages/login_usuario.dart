@@ -1,7 +1,10 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
 
-// pagina de login do usuario coletor
+// Project imports:
 import 'login_coletor.dart';
+
+// pagina de login do usuario coletor
 
 // pagina de login do usuario comum
 class LoginPage extends StatelessWidget {
@@ -23,8 +26,8 @@ class LoginPage extends StatelessWidget {
               ClipOval(
                 child: Image.asset(
                   'assets/imagens/logo.png',
-                  height: 250, 
-                  width: 250,// Controla a altura da imagem
+                  height: 250,
+                  width: 250, // Controla a altura da imagem
                   fit: BoxFit.cover,
                 ),
               ),
@@ -35,7 +38,10 @@ class LoginPage extends StatelessWidget {
                 decoration: InputDecoration(
                   hintText: 'Digite o seu Email',
                   border: OutlineInputBorder(),
-                  contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0), // Ajuste o padding interno
+                  contentPadding: EdgeInsets.symmetric(
+                    vertical: 10.0,
+                    horizontal: 10.0,
+                  ), // Ajuste o padding interno
                 ),
               ),
 
@@ -48,7 +54,10 @@ class LoginPage extends StatelessWidget {
                 decoration: InputDecoration(
                   hintText: 'Digite a sua senha',
                   border: OutlineInputBorder(),
-                  contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                  contentPadding: EdgeInsets.symmetric(
+                    vertical: 10.0,
+                    horizontal: 10.0,
+                  ),
                 ),
               ),
 
@@ -57,7 +66,6 @@ class LoginPage extends StatelessWidget {
                 alignment: Alignment.centerRight,
                 child: TextButton(
                   onPressed: () {
-                    
                     // Lógica para recuperar a senha
                   },
                   child: const Text(
@@ -76,7 +84,7 @@ class LoginPage extends StatelessWidget {
                   },
                   style: ElevatedButton.styleFrom(
                     // Cor de fundo do botão (azul na imagem)
-                    backgroundColor: Colors.blue, 
+                    backgroundColor: Colors.blue,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5.0),
                     ),
@@ -113,7 +121,7 @@ class LoginPage extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
+                      MaterialPageRoute<void>(
                         builder: (context) => const LoginPageColetor(),
                       ),
                     );
@@ -127,10 +135,7 @@ class LoginPage extends StatelessWidget {
                   ),
                   child: const Text(
                     'Usuário Coletor',
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.black,
-                    ),
+                    style: TextStyle(fontSize: 18, color: Colors.black),
                   ),
                 ),
               ),
@@ -140,14 +145,17 @@ class LoginPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  const Text("Ainda não tem conta?"),
+                  const Text('Ainda não tem conta?'),
                   TextButton(
                     onPressed: () {
                       // Lógica para navegar para a tela de registro
                     },
                     child: const Text(
                       'Criar conta',
-                      style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        color: Colors.blue,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ],

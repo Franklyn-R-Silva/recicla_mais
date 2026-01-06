@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import '../pages/coletas_disponiveis_page.dart';
 
 // pagina de login do usuario coletor
@@ -96,7 +99,7 @@ class _LoginPageColetorState extends State<LoginPageColetor> {
                     // Navega para a página de coletas, permitindo voltar.
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
+                      MaterialPageRoute<void>(
                         builder: (context) => const ColetasDisponiveisPage(),
                       ),
                     );
@@ -128,7 +131,7 @@ class _LoginPageColetorState extends State<LoginPageColetor> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  const Text("Ainda não tem conta?"),
+                  const Text('Ainda não tem conta?'),
                   TextButton(
                     onPressed: () {
                       // Lógica para navegar para a tela de registro

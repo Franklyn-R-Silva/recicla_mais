@@ -1,14 +1,14 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
 
-// IMPORTS DOS COMPONENTES (se estiverem em outro lugar, me avise)
+// Project imports:
 import '../components/inputs/custom_input.dart';
 import '../components/inputs/photo_uploader.dart';
 import '../components/inputs/section_label.dart';
 
-enum RegistrationType {
-  usuario,
-  coletor,
-}
+// IMPORTS DOS COMPONENTES (se estiverem em outro lugar, me avise)
+
+enum RegistrationType { usuario, coletor }
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -38,11 +38,8 @@ class _RegisterPageState extends State<RegisterPage>
         iconTheme: const IconThemeData(color: Colors.black),
         centerTitle: true,
         title: const Text(
-          "Criar conta",
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.w700,
-          ),
+          'Criar conta',
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700),
         ),
         bottom: TabBar(
           controller: controller,
@@ -50,8 +47,8 @@ class _RegisterPageState extends State<RegisterPage>
           unselectedLabelColor: Colors.black54,
           indicatorColor: Colors.green,
           tabs: const [
-            Tab(text: "Usuário"),
-            Tab(text: "Coletor"),
+            Tab(text: 'Usuário'),
+            Tab(text: 'Coletor'),
           ],
         ),
       ),
@@ -103,67 +100,67 @@ class _RegistrationFormState extends State<RegistrationForm> {
         children: [
           const Center(
             child: Text(
-              "Preencha seus dados para concluir o cadastro.",
+              'Preencha seus dados para concluir o cadastro.',
               style: TextStyle(fontSize: 14),
             ),
           ),
 
           const SizedBox(height: 24),
 
-          const SectionLabel("Nome completo"),
-          CustomInput(controller: nome, hint: "Seu Nome Completo"),
+          const SectionLabel('Nome completo'),
+          CustomInput(controller: nome, hint: 'Seu Nome Completo'),
           const SizedBox(height: 20),
 
-          const SectionLabel("Email"),
+          const SectionLabel('Email'),
           CustomInput(
             controller: email,
-            hint: "Digite o seu Email",
+            hint: 'Digite o seu Email',
             keyboardType: TextInputType.emailAddress,
           ),
           const SizedBox(height: 20),
 
-          const SectionLabel("Telefone"),
+          const SectionLabel('Telefone'),
           CustomInput(
             controller: telefone,
-            hint: "Digite o seu Número",
+            hint: 'Digite o seu Número',
             keyboardType: TextInputType.phone,
           ),
           const SizedBox(height: 20),
 
-          const SectionLabel("Data de nascimento"),
+          const SectionLabel('Data de nascimento'),
           CustomInput(
             controller: nascimento,
-            hint: "dd/mm/aaaa",
+            hint: 'dd/mm/aaaa',
             keyboardType: TextInputType.datetime,
           ),
           const SizedBox(height: 20),
 
-          const SectionLabel("Gênero"),
+          const SectionLabel('Gênero'),
           CustomInput(
             controller: genero,
-            hint: "Selecione",
+            hint: 'Selecione',
             readOnly: true,
             onTap: _abrirGenero,
           ),
           const SizedBox(height: 20),
 
-          const SectionLabel("Cidade - Estado"),
-          CustomInput(controller: cidadeEstado, hint: "Cidade - UF"),
+          const SectionLabel('Cidade - Estado'),
+          CustomInput(controller: cidadeEstado, hint: 'Cidade - UF'),
           const SizedBox(height: 20),
 
-          const SectionLabel("Endereço, Nº"),
-          CustomInput(controller: endereco, hint: "Rua, Número, Complemento"),
+          const SectionLabel('Endereço, Nº'),
+          CustomInput(controller: endereco, hint: 'Rua, Número, Complemento'),
           const SizedBox(height: 20),
 
-          const SectionLabel("Senha"),
-          CustomInput(controller: senha, obscure: true, hint: "Crie uma senha"),
+          const SectionLabel('Senha'),
+          CustomInput(controller: senha, obscure: true, hint: 'Crie uma senha'),
           const SizedBox(height: 20),
 
-          const SectionLabel("Confirmar senha"),
+          const SectionLabel('Confirmar senha'),
           CustomInput(
             controller: confirmarSenha,
             obscure: true,
-            hint: "Digite a senha novamente",
+            hint: 'Digite a senha novamente',
           ),
 
           const SizedBox(height: 28),
@@ -187,7 +184,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
               ),
               const Expanded(
                 child: Text(
-                  "Concordo com os Termos de Uso e Política de Privacidade.",
+                  'Concordo com os Termos de Uso e Política de Privacidade.',
                   style: TextStyle(fontSize: 13),
                 ),
               ),
@@ -214,7 +211,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
                   padding: const EdgeInsets.symmetric(vertical: 16),
                 ),
                 child: const Text(
-                  "Criar Conta",
+                  'Criar Conta',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 17,
@@ -235,14 +232,14 @@ class _RegistrationFormState extends State<RegistrationForm> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text("Já é cadastrado?  "),
+                  const Text('Já é cadastrado?  '),
                   Text(
-                    "Fazer Login",
+                    'Fazer Login',
                     style: TextStyle(
                       color: Colors.green.shade700,
                       fontWeight: FontWeight.w600,
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
@@ -255,29 +252,29 @@ class _RegistrationFormState extends State<RegistrationForm> {
   }
 
   void _abrirGenero() {
-    showModalBottomSheet(
+    showModalBottomSheet<void>(
       context: context,
       builder: (_) => Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           ListTile(
-            title: const Text("Masculino"),
+            title: const Text('Masculino'),
             onTap: () {
-              genero.text = "Masculino";
+              genero.text = 'Masculino';
               Navigator.pop(context);
             },
           ),
           ListTile(
-            title: const Text("Feminino"),
+            title: const Text('Feminino'),
             onTap: () {
-              genero.text = "Feminino";
+              genero.text = 'Feminino';
               Navigator.pop(context);
             },
           ),
           ListTile(
-            title: const Text("Outro"),
+            title: const Text('Outro'),
             onTap: () {
-              genero.text = "Outro";
+              genero.text = 'Outro';
               Navigator.pop(context);
             },
           ),

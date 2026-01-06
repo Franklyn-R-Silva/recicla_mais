@@ -1,3 +1,4 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
 
 class SectionLabel extends StatelessWidget {
@@ -25,7 +26,7 @@ class SectionLabel extends StatelessWidget {
           ),
           if (requiredField)
             const TextSpan(
-              text: " *",
+              text: ' *',
               style: TextStyle(
                 color: Colors.red,
                 fontSize: 15,

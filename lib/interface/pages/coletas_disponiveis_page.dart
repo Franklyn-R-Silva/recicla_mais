@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import '../components/card_colector.dart';
 
 class ColetasDisponiveisPage extends StatefulWidget {
@@ -12,7 +15,7 @@ class _ColetasDisponiveisPageState extends State<ColetasDisponiveisPage> {
   // Lista de dados de exemplo para teste.
   // Em um app real, isso viria de um banco de dados ou API.
   static final List<ColetaCardData> _coletasMock = [
-    ColetaCardData(
+    const ColetaCardData(
       tempoColeta: 'Hoje, 13:10 - 15:10',
       distanciaKm: '2.5 km',
       nomeSolicitante: 'Aydom',
@@ -23,7 +26,7 @@ class _ColetasDisponiveisPageState extends State<ColetasDisponiveisPage> {
       detalhesAdicionais: 'Garrafas PET e embalagens limpas.',
       observacoes: 'Favor trazer sacos resistentes.',
     ),
-    ColetaCardData(
+    const ColetaCardData(
       tempoColeta: 'Hoje, 15:30 - 17:00',
       distanciaKm: '5.1 km',
       nomeSolicitante: 'Maria Silva',
@@ -34,7 +37,7 @@ class _ColetasDisponiveisPageState extends State<ColetasDisponiveisPage> {
       detalhesAdicionais: 'Caixas de papelão desmontadas e garrafas de vidro.',
       observacoes: 'Cuidado com os cacos de vidro.',
     ),
-    ColetaCardData(
+    const ColetaCardData(
       tempoColeta: 'Amanhã, 09:00 - 11:00',
       distanciaKm: '8.0 km',
       nomeSolicitante: 'Carlos Souza',
@@ -45,7 +48,7 @@ class _ColetasDisponiveisPageState extends State<ColetasDisponiveisPage> {
       detalhesAdicionais: 'Latas de alumínio e panelas velhas.',
       observacoes: 'Verificar se há itens enferrujados.',
     ),
-    ColetaCardData(
+    const ColetaCardData(
       tempoColeta: 'Amanhã, 09:00 - 11:00',
       distanciaKm: '10.2 km',
       nomeSolicitante: 'Jhon Corno',

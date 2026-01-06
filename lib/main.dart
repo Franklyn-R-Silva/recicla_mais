@@ -1,10 +1,13 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
+import 'interface/pages/login_usuario.dart';
 
 // importação da pagina de registro
 import 'interface/pages/register.dart'; 
 
 // importação das Paginas do App Recicla
-import 'interface/pages/login_usuario.dart';
 
 // função principal responsavel por execulta o app
 void main() {
